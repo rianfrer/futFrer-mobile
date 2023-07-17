@@ -1,0 +1,32 @@
+img {
+    width: 40%;
+    height: 40%;
+}
+
+h2 {
+    font-size: 28px;
+    font-family: auto;
+}
+
+
+ion-button{
+    margin-right: 5%;
+    --background: rgb(254, 136, 136);
+    --border-radius: 10px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --padding-start: 8px;
+    --padding-end: 8px;
+  
+    &::before {
+      content: "";
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    }
+}

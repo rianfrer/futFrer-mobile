@@ -1,0 +1,103 @@
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 16px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody td {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody td:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding-right: 8px;
+  width: 200px;
+}
+
+tbody td:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+tbody td:nth-child(2) {
+  font-weight: bold;
+}
+
+.logo {
+  max-width: 30px;
+  max-height: 30px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+}
+
+.team-info span:last-child {
+  margin-left: 5px;
+}
+
+td {
+  font-size: 16px;
+}
+
+.win::before {
+  content: '●';
+  color: green;
+}
+
+.loss::before {
+  content: '●';
+  color: red;
+}
+
+.draw::before {
+  content: '●';
+  color: gray;
+}
+
+ion-button{
+  margin-right: 5%;
+  --background: rgb(254, 136, 136);
+  --border-radius: 10px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --padding-start: 8px;
+  --padding-end: 8px;
+
+  &::before {
+    content: "";
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  }
+}

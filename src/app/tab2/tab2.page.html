@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tabela
+    </ion-title>
+    <ion-button slot="end" (click)="confirmExit()">
+      <ion-icon name="exit"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Classificação</th>
+          <th>P</th>
+          <th>J</th>
+          <th>V</th>
+          <th>E</th>
+          <th>D</th>
+          <th>GP</th>
+          <th>GC</th>
+          <th>SG</th>
+          <th>ÚLT.JOGOS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let time of standings">
+          <td>
+            <div class="team-info">
+              <span>{{ time.rank }}</span>
+              <img [src]="time.team.logo" alt="Logo" class="logo">
+              <span>{{ time.team.name }}</span>
+            </div>
+          </td>
+          <td>{{ time.points }}</td>
+          <td>{{ time.all.played }}</td>
+          <td>{{ time.all.win }}</td>
+          <td>{{ time.all.draw }}</td>
+          <td>{{ time.all.lose }}</td>
+          <td>{{ time.all.goals.for }}</td>
+          <td>{{ time.all.goals.against }}</td>
+          <td>{{ time.goalsDiff }}</td>
+          <td>
+            <span class="result-balls">
+              <span class="result-ball">{{ time.form[0] }}</span> 
+              <span class="result-ball">{{ time.form[1] }}</span>
+              <span class="result-ball">{{ time.form[2] }}</span>
+              <span class="result-ball">{{ time.form[3] }}</span>
+              <span class="result-ball">{{ time.form[4] }}</span>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>

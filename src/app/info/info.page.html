@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header-title">Detalhes do Time</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content">
+  <ion-card class="card">
+    <ion-img class="team-logo" [src]="time?.team.logo"></ion-img>
+    <ion-card-content class="card-content">
+      <ion-card-title class="team-name">{{ time?.team.name }}</ion-card-title>
+      <div class="info-section">
+        <p class="info-label">Cidade: {{ time?.venue.city }}</p>
+      </div>
+      <div class="info-section">
+        <p class="info-label">Estádio: {{ time?.venue.name }}</p>
+      </div>
+      <div class="info-section">
+        <p class="info-label">Capacidade: {{ time?.venue.capacity }}</p>
+      </div>
+      <h3 class="players-title">Jogadores:</h3>
+      <ion-list class="players-list">
+        <ion-item *ngFor="let jogador of jogadores" class="player-item">
+          <div class="player-info">
+            <p class="player-name">{{ jogador.player.name }}</p>
+            <div class="player-stats">
+              <p class="player-stat">Idade: {{ jogador.player.age }}</p>
+              <p class="player-stat">Nacionalidade: {{ jogador.player.nationality }}</p>
+              <p class="player-stat">Gols: {{ jogador.statistics[0]?.goals.total }}</p>
+              <p class="player-stat">Cartões Amarelos: {{ jogador.statistics[0]?.cards.yellow }}</p>
+              <p class="player-stat">Cartões Vermelhos: {{ jogador.statistics[0]?.cards.red }}</p>
+            </div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

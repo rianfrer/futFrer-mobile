@@ -1,0 +1,19 @@
+<ion-content class="content">
+  <div class="logo-container">
+    <img src="assets/Logo.png" alt="Logo">
+  </div>
+
+  <ion-item class="input-item">
+    <ion-input type="text" placeholder="Email" clearInput [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item class="input-item">
+    <ion-input type="password" placeholder="Senha" clearInput [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" class="login-button" (click)="login()">Entrar</ion-button>
+
+  <div class="signup-link">
+    <p>Não tem uma conta? <a href="/cadastro" class="signup-text">Cadastre-se</a></p>
+  </div>
+</ion-content>

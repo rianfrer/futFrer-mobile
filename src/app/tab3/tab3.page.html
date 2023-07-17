@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Jogos
+    </ion-title>
+    <ion-button slot="end" (click)="confirmExit()">
+      <ion-icon name="exit"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="games-list">
+    <div class="game" *ngFor="let game of lastGames">
+      <div class="team">
+        <img class="team-logo" [src]="game.teams.home.logo" alt="Home Team Logo" />
+      </div>
+      <div class="score">{{ game.goals.home }} - {{ game.goals.away }}</div>
+      <div class="team">
+        <img class="team-logo" [src]="game.teams.away.logo" alt="Away Team Logo" />
+      </div>
+      <div class="game-info">
+        <p class="game-time">{{ game.fixture.date | date:'dd/MM/yyyy' }}</p>
+        <p class="game-venue">{{ game.fixture.venue.city }}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

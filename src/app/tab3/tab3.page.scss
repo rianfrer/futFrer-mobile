@@ -1,0 +1,67 @@
+.games-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .game {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #8edbab;
+    border-radius: 5px;
+  }
+  
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .team-logo {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .score {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
+  
+  .game-time {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .game-venue {
+    font-size: 12px;
+  }
+  
+  ion-button{
+    margin-right: 5%;
+    --background: rgb(254, 136, 136);
+    --border-radius: 10px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --padding-start: 8px;
+    --padding-end: 8px;
+  
+    &::before {
+      content: "";
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    }
+  }

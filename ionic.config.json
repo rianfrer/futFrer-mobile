@@ -1,0 +1,7 @@
+{
+  "name": "FutFrer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

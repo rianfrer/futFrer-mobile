@@ -1,0 +1,22 @@
+ion-content {
+    --background: #83ddd8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    ;
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 70%;
+
+}
+
+.logo-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 25%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(4px);
+}
